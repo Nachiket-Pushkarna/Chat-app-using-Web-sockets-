@@ -1,0 +1,13 @@
+.messages {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+.lottie {
+    width: 70px;
+    margin-left: 0px;
+    margin-bottom: 15px;
+    background-color: rgba(255, 0, 0, 0.4);
+}
