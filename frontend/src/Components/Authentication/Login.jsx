@@ -18,7 +18,7 @@ const Login = () => {
 
   const handleClick = () => setShow(!show);
   const submitHandler = async () => {
-    setLoading(true);
+    setLoading(!loading);
     if (!email || !password) {
       toast({
         title: "Please Fill all the Feilds",
@@ -27,7 +27,7 @@ const Login = () => {
         isClosable: true,
         position: "bottom",
       });
-      setLoading(false);
+      setLoading(!loading);
       return;
     }
 
@@ -45,7 +45,7 @@ const Login = () => {
       );
       console.log(data);
       localStorage.setItem("userInfo", JSON.stringify(data));
-      setLoading(false);
+      setLoading(!loading);
       navigate("/chats");
     } catch (error) {
       toast({
@@ -56,7 +56,7 @@ const Login = () => {
         isClosable: true,
         position: "bottom",
       });
-      setLoading(false);
+      setLoading(!loading);
     }
   };
 

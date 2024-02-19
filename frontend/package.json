@@ -25,8 +25,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts --openssl-legacy-provider start",
-    "build": "react-scripts --openssl-legacy-provider build",
+    "start": "cross-env port=3000 react-scripts start",
+    "build": "react-scripts build --output public",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
